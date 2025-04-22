@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Robux Giveaway - Official Roblox Gift</title>
+    <meta property="og:title" content="Free Robux Giveaway - Official Roblox Gift" />
+    <meta property="og:description" content="Enter our Free Robux Giveaway! Valid only for Roblox players. Stay tuned for results." />
+    <meta property="og:image" content="https://i.pinimg.com/736x/0c/21/52/0c215277a5b9286286656f65318057f8.jpg" />
+    <meta property="og:url" content="https://discord.gg/ftap" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free Robux Giveaway - Official Roblox Gift" />
+    <meta name="twitter:description" content="Enter our Free Robux Giveaway! Valid only for Roblox players. Stay tuned for results." />
+    <meta name="twitter:image" content="robux-giveaway-image.jpg" />
+    <meta name="twitter:url" content="https://e-z.bio/ftap" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Device Has Been Detected</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Background video styling */
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: fill;
+            z-index: -1;
+            pointer-events: none; /* ← 動画がクリックイベントを邪魔しないように */
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            color: #e0e0e0;
+            font-family: 'Courier New', monospace;
+            padding: 30px;
+        }
+
+        .info-box {
+            background: rgba(0, 0, 0, 0.6);
+            margin: 20px 0;
+            padding: 20px;
+            border-left: 3px solid red;
+        }
+
+        .typing {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: .15em solid red;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: red; }
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background video -->
+    <video id="background-video" autoplay loop muted>
+        <source src="Cowbell cult smoke (feat. JOEHDAH) Slow-Reverb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Background music -->
+    <audio id="background-music" autoplay loop>
+        <source src="Cowbell cult smoke (feat. JOEHDAH) Slow-Reverb (online-audio-converter.com).mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <div class="container">
+        <h1 class="typing">We See Everything...</h1>
+
+        <div class="info-box">
+            <h2>Basic Intel</h2>
+            <div class="info-grid">
+                <div><strong>IP Address:</strong> <span id="ip-address" class="loading">Fetching...</span></div>
+                <div><strong>Local IP:</strong> <span id="local-ip">Fetching...</span></div>
+                <div><strong>User Agent:</strong> <span id="user-agent"></span></div>
+                <div><strong>Connection Time:</strong> <span id="current-time"></span></div>
+                <div><strong>Screen Resolution:</strong> <span id="screen-resolution"></span></div>
+                <div><strong>Available Memory:</strong> <span id="device-memory"></span></div>
+                <div><strong>CPU Cores:</strong> <span id="cpu-cores"></span></div>
+                <div><strong>Page URL:</strong> <span id="page-url"></span></div>
+                <div><strong>JavaScript Enabled:</strong> <span id="js-enabled">Yes</span></div>
+                <div><strong>Device Type:</strong> <span id="device-type"></span></div>
+                <div><strong>Timezone:</strong> <span id="timezone"></span></div>
+                <div><strong>Browser Bit Version:</strong> <span id="bit-version"></span></div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h2>Browser Secrets</h2>
+            <div class="info-grid">
+                <div><strong>Name:</strong> <span id="browser-name"></span></div>
+                <div><strong>Version:</strong> <span id="browser-version"></span></div>
+                <div><strong>OS:</strong> <span id="operating-system"></span></div>
+                <div><strong>Platform:</strong> <span id="platform"></span></div>
+                <div><strong>Language:</strong> <span id="language"></span></div>
+                <div><strong>Cookies Enabled:</strong> <span id="cookies-enabled"></span></div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h2>Location Revealed</h2>
+            <div class="info-grid">
+                <div><strong>Country:</strong> <span id="country"></span></div>
+                <div><strong>Region:</strong> <span id="region"></span></div>
+                <div><strong>City:</strong> <span id="city"></span></div>
+                <div><strong>Postal Code:</strong> <span id="postal"></span></div>
+                <div><strong>ISP:</strong> <span id="isp"></span></div>
+                <div><strong>Coordinates:</strong> <span id="location"></span></div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h2>Network Surveillance</h2>
+            <div class="info-grid" id="network-info"></div>
+        </div>
+
+        <div class="info-box">
+            <h2>Deep Device Dive</h2>
+            <div class="info-grid">
+                <div><strong>Touch Support:</strong> <span id="touch-support"></span></div>
+                <div><strong>Battery Status:</strong> <span id="battery-status"></span></div>
+                <div><strong>Connection Type:</strong> <span id="connection-type"></span></div>
+                <div><strong>Effective Connection:</strong> <span id="effective-connection-type"></span></div>
+                <div><strong>Downlink Speed:</strong> <span id="downlink-speed"></span></div>
+                <div><strong>Round Trip Time:</strong> <span id="rtt"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        // Redirect to Discord when the page is clicked
+        document.body.addEventListener('click', function() {
+            window.location.href = 'https://discord.gg/ftap';  // Redirect to the Discord server
+        });
+    </script>
+</body>
+</html>
