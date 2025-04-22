@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body {
+    font-family: 'Share Tech Mono', monospace;
+    background-color: #000000; /* 完全な黒背景 */
+    color: #00FF00; /* 蛍光緑 */
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://www.transparenttextures.com/patterns/black-linen.png');
+    background-size: cover;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.95);
+    border: 2px solid #FF0000; /* 血のような赤 */
+    border-radius: 15px;
+    box-shadow: 0 0 80px rgba(255, 0, 0, 0.9); /* 赤い強烈なシャドウ */
+    animation: fadeIn 1.5s ease-in-out;
+    backdrop-filter: blur(10px); /* 背景をさらにぼかして不気味さを強調 */
+    transition: transform 0.5s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.1); /* ホバー時に少し拡大 */
+    box-shadow: 0 0 100px rgba(255, 0, 0, 1); /* 強烈な赤い影 */
+}
+
+h1, h2 {
+    color: #FF0000; /* 赤色 */
+    border-bottom: 2px solid #FF0000;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 2.5rem;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.9); /* 影を強調し、不気味さを追加 */
+}
+
+h1 {
+    font-size: 4rem; /* 見出し1は特に大きく */
+    color: #FF4C4C; /* 少し淡い赤 */
+}
+
+.info-box {
+    margin-bottom: 50px;
+    padding: 30px;
+    background: rgba(15, 15, 15, 0.95);
+    border-left: 7px solid #FF0000; /* 左側に赤いボーダー */
+    color: #00FF00;
+    font-size: 1.2rem;
+    animation: boxSlideIn 1.5s ease-in-out;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.7); /* 赤い影 */
+    border-radius: 10px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    border: 1px dotted #FF0000; /* 赤い点線 */
+    padding: 20px;
+    background: rgba(30, 30, 30, 0.85); /* より暗いグリッド背景 */
+    border-radius: 10px;
+}
+
+strong {
+    color: #FF0000;
+    font-weight: bold;
+    text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.8); /* 強調文字に強い影 */
+}
+
+.loading {
+    color: #888;
+    font-style: italic;
+    animation: blink 1.5s infinite;
+}
+
+.success {
+    color: #00FF00;
+    font-weight: bold;
+    animation: pulseGreen 2s infinite alternate; /* 成功時の緑が脈打つアニメーション */
+}
+
+.error {
+    color: #FF0000;
+    font-weight: bold;
+    animation: pulseRed 2s infinite alternate; /* エラー時の赤が脈打つアニメーション */
+}
+
+a {
+    color: #FF8000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #FFD700; /* 金色に変化 */
+    text-decoration: underline;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes boxSlideIn {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulseGreen {
+    0% { color: #00FF00; text-shadow: 0 0 10px #00FF00; }
+    100% { color: #00FF00; text-shadow: 0 0 20px #00FF00; }
+}
+
+@keyframes pulseRed {
+    0% { color: #FF0000; text-shadow: 0 0 10px #FF0000; }
+    100% { color: #FF0000; text-shadow: 0 0 20px #FF0000; }
+}
+
+.typing {
+    display: inline-block;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(30, end), blink-caret 0.7s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}
